@@ -8,10 +8,14 @@ export const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 300px;
+  padding: 0px 361px;
 `;
 
 export const NavContainer = styled.nav`
   display: flex;
   gap: 13px;
+
+  a:hover {
+    opacity: 0.8;
+  }
 `;
