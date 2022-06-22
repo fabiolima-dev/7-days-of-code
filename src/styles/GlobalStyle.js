@@ -5,8 +5,7 @@ export const GlobalStyle = createGlobalStyle`
 
 ${ResetCSS}
 
-html, body, #root {
-    height: 100%;
+body {
     font-family: 'Montserrat', sans-serif;
 }
 

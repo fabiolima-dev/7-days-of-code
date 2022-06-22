@@ -17,28 +17,22 @@ export const NewsLetterWrapper = styled.div`
   }
 `;
 
-export const ImageWrapper = styled.img`
-  position: fixed;
-  right: 415px;
-  z-index: -10;
-`;
-
 export const Form = styled.form`
   display: flex;
   height: 75px;
   width: 585px;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
 
+  div {
+    position: relative;
+    width: 100%;
+  }
+
   input,
   button {
     height: 100%;
     border-radius: 0px;
     border: none;
-  }
-
-  div {
-    position: relative;
-    width: 100%;
   }
 
   input {
@@ -76,4 +70,10 @@ export const Form = styled.form`
   button:hover {
     opacity: 0.8;
   }
+`;
+
+export const ImageWrapper = styled.img`
+  position: fixed;
+  right: 415px;
+  z-index: -10;
 `;
