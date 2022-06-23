@@ -2,7 +2,20 @@ import styled from "styled-components";
 
 export const HeroWrapper = styled.div`
   display: flex;
-  padding: 0px 361px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const Hero = styled.div`
+  width: 1178px;
+  position: relative;
+  margin: 0px 20px;
+  display: flex;
+
+  @media screen and (max-width: 1000px) {
+    justify-content: center;
+  }
 `;
 
 export const NewsLetterWrapper = styled.div`
@@ -10,32 +23,46 @@ export const NewsLetterWrapper = styled.div`
   flex-direction: column;
   gap: 20px;
   margin-top: 210px;
-  width: 585px;
+  max-width: 585px;
+
+  @media screen and (max-width: 1000px) {
+    align-items: center;
+    text-align: center;
+  }
+
+  h1 {
+    @media screen and (max-width: 400px) {
+      font-size: 64px;
+    }
+  }
 
   p {
-    width: 481px;
+    max-width: 481px;
   }
 `;
 
 export const Form = styled.form`
   display: flex;
-  height: 75px;
-  width: 585px;
+  max-width: 585px;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
 
-  div {
-    position: relative;
+  @media screen and (max-width: 1000px) {
     width: 100%;
   }
 
-  input,
-  button {
-    height: 100%;
-    border-radius: 0px;
-    border: none;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  div {
+    position: relative;
+    flex-grow: 1;
   }
 
   input {
+    border-radius: 0px;
+    border: none;
+    height: 75px;
     width: 100%;
     padding: 0px 55px;
   }
@@ -60,11 +87,18 @@ export const Form = styled.form`
   }
 
   button {
-    width: 194px;
+    border-radius: 0px;
+    border: none;
+    height: 75px;
+    flex-basis: 194px;
     background-color: rgba(255, 203, 71, 1);
     color: white;
     font-size: 16px;
-    flex-shrink: 0;
+    max-height: 75px;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
   }
 
   button:hover {
@@ -73,7 +107,12 @@ export const Form = styled.form`
 `;
 
 export const ImageWrapper = styled.img`
-  position: fixed;
-  right: 415px;
+  position: absolute;
+  top: -30px;
+  right: 0;
   z-index: -10;
+
+  @media screen and (max-width: 1000px) {
+    display: none;
+  }
 `;
